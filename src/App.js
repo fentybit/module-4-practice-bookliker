@@ -20,10 +20,6 @@ class App extends React.Component {
     fetch('http://localhost:3000/books')
       .then(resp => resp.json())
       .then(fetchBooks => this.setState({ books: fetchBooks }))
-
-    fetch('http://localhost:3000/users')
-      .then(resp => resp.json())
-      .then(fetchUsers => this.setState({ user: fetchUsers[0] }))
   }
 
   handleOnClick = (id) => {
